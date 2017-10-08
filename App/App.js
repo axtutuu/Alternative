@@ -1,8 +1,11 @@
 import React from 'react';
 import {Scene, Router} from 'react-native-router-flux';
-import Top   from './Components/Views/Top';
 import configureStore from './Stores/configureStore';
 import { Provider }    from 'react-redux';
+
+import Top   from './Components/Views/Top';
+import Question   from './Components/Views/Question';
+
 const store = configureStore();
 
 export default class App extends React.Component {
@@ -12,6 +15,7 @@ export default class App extends React.Component {
         <Router>
           <Scene key="root">
             <Scene key="top" initial component={Top} />
+            <Scene key="question" component={Question} />
           </Scene>
         </Router>
       </Provider>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import {Actions} from 'react-native-router-flux';
 import {
   AppRegistry,
   StyleSheet,
@@ -8,13 +7,12 @@ import {
   View
 } from 'react-native';
 
-export default class Top extends React.Component {
+export default class Question extends React.Component {
 
   render() {
-    console.log('render');
     return (
-      <View style={styles.container}>
-        <Text onPress={Actions.question}> Question </Text>
+      <View>
+        <Text> Question </Text>
       </View>
     )
   }

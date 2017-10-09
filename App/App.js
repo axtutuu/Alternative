@@ -15,7 +15,7 @@ export default class App extends React.Component {
         <Router>
           <Scene key="root">
             <Scene key="top" initial component={Top} />
-            <Scene key="question" component={Question} />
+            <Scene key="question" component={Question} hideNavBar={true}/>
           </Scene>
         </Router>
       </Provider>

@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 
 export default class Question extends React.Component {
-
   render() {
     return (
       <View>

@@ -6,16 +6,18 @@ import {
   Text,
   View,
   TextInput,
-  Button
+  Button,
+  Image
 } from 'react-native';
 
 export default class Question extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} fontFamily='Hiragino Kaku Gothic ProN'>
         <View style={styles.question}>
-          <Text>問題</Text>
-          <Text>1+1は?</Text>
+          <Text>問題#1</Text>
+          <Text>？に当てはまる適切な数字を回答</Text>
+          <Image source={require('../../Images/sample-question.png')} />
         </View>
         <View style={styles.answer}>
           <TextInput style={styles.answerInput}/>
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   question: {
     backgroundColor: '#FFF',
@@ -56,5 +58,5 @@ const styles = StyleSheet.create({
     height: 50,
     borderColor: '#fafafa',
     borderWidth: 1
-  },
+  }
 });

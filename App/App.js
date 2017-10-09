@@ -13,9 +13,9 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <Router>
-          <Scene key="root">
-            <Scene key="top" initial component={Top} />
-            <Scene key="question" component={Question} hideNavBar={true}/>
+          <Scene key="root" hideNavBar={true}>
+            <Scene key="top"  component={Top} />
+            <Scene key="question" initial component={Question} />
           </Scene>
         </Router>
       </Provider>

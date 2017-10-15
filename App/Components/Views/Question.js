@@ -11,6 +11,13 @@ import {
 } from 'react-native';
 
 export default class Question extends React.Component {
+  submit() {
+    console.log(this.state)
+    if(this.state.answer == 1) {
+      alert('success')
+    }
+  }
+
   render() {
     return (
       <View style={styles.container} fontFamily='Hiragino Kaku Gothic ProN'>
@@ -20,10 +27,13 @@ export default class Question extends React.Component {
           <Image source={require('../../Images/sample-question.png')} />
         </View>
         <View style={styles.answer}>
-          <TextInput style={styles.answerInput}/>
+          <TextInput
+            style={styles.answerInput}
+            onChangeText={v => this.setState({answer: v}) }
+          />
           <Button color="#841584"
             title='Answer'
-            onPress={() => console.log('answer')}
+            onPress={this.submit.bind(this)}
           />
         </View>
       </View>
@@ -52,11 +62,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     marginTop: 50,
     padding: 10,
-    minHeight: 150,
+    minHeight: 100,
   },
   answerInput: {
     height: 50,
-    borderColor: '#fafafa',
+    borderColor: '#ccc',
     borderWidth: 1
   }
 });
